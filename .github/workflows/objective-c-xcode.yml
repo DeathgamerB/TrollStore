@@ -20,7 +20,7 @@ jobs:
       - name: Install Theos
         uses: Randomblock1/theos-action@v1.4
       - name: Install dependency
-        run: sudo brew -y install libarchive
+        run:  brew -y install libarchive
       - name: Set Default Scheme
         run: |
           scheme_list=$(xcodebuild -list -json | tr -d "\n")
