@@ -19,8 +19,7 @@ jobs:
         uses: Homebrew/actions/setup-homebrew@master
       - name: Install Theos
         uses: Randomblock1/theos-action@v1.4
-      - uses: ConorMacBride/install-package@v1
-        brew: libarchive
+      - runs: brew install libarchive
       - name: Set Default Scheme
         run: |
           scheme_list=$(xcodebuild -list -json | tr -d "\n")
