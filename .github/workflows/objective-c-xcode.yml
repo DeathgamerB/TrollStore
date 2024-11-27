@@ -20,7 +20,6 @@ jobs:
       - name: Install Theos
         uses: Randomblock1/theos-action@v1.4
       - uses: ConorMacBride/install-package@v1
-        with:
         brew: libarchive
       - name: Set Default Scheme
         run: |
