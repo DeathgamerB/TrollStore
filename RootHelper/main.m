@@ -877,11 +877,6 @@ int installApp(NSString* appPackagePath, BOOL sign, BOOL force, BOOL isTSUpdate,
 	NSString* appId = appIdForAppPath(appBundleToInstallPath);
 	if(!appId) return 176;
 
-	if(([appId.lowercaseString isEqualToString:@"com.opa334.trollstore"] && !isTSUpdate) || [immutableAppBundleIdentifiers() containsObject:appId.lowercaseString])
-	{
-		return 179;
-	}
-
 	if(!infoDictionaryForAppPath(appBundleToInstallPath)) return 172;
 
 	if(!isTSUpdate)
